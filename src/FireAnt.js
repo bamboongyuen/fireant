@@ -3,17 +3,19 @@ import { useSelector } from 'react-redux';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
-import DrawerContent from './component/DrawerContent';
 
+import { COLOR, SIZE } from './help/constance';
 import Market from './screen/Market';
 import Invite from './screen/Invite';
 import JoinRoom from './screen/JoinRoom';
 import Learning from './screen/Learning';
 import Notify from './screen/Notify';
+import Message from './screen/Message';
 import Setting from './screen/Setting';
 import Auth from './screen/Auth';
 import News from './screen/News';
-import { COLOR, SIZE } from './help/constance';
+import TabHeader from './component/TabHeader';
+import DrawerContent from './component/DrawerContent';
 
 function FireAnt() {
     console.log('render');
@@ -69,11 +71,26 @@ function FireAnt() {
                                         style={{ width: 30 }}
                                     />
                                 ),
+                                headerTitle: () => <TabHeader />,
                             }}
                         />
                         <Drawer.Screen
                             name="Invite"
                             component={Invite}
+                            options={{
+                                drawerIcon: () => (
+                                    <FontAwesome
+                                        name="dribbble"
+                                        size={SIZE.icon}
+                                        color={COLOR.textGray}
+                                        style={{ width: 30 }}
+                                    />
+                                ),
+                            }}
+                        />
+                        <Drawer.Screen
+                            name="Message"
+                            component={Message}
                             options={{
                                 drawerIcon: () => (
                                     <FontAwesome
@@ -129,6 +146,62 @@ function FireAnt() {
                         />
                         <Drawer.Screen
                             name="Setting"
+                            component={Setting}
+                            options={{
+                                drawerIcon: () => (
+                                    <FontAwesome
+                                        name="gear"
+                                        size={SIZE.icon}
+                                        color={COLOR.textGray}
+                                        style={{ width: 30 }}
+                                    />
+                                ),
+                            }}
+                        />
+                        <Drawer.Screen
+                            name="Setting1"
+                            component={Setting}
+                            options={{
+                                drawerIcon: () => (
+                                    <FontAwesome
+                                        name="gear"
+                                        size={SIZE.icon}
+                                        color={COLOR.textGray}
+                                        style={{ width: 30 }}
+                                    />
+                                ),
+                            }}
+                        />
+                        <Drawer.Screen
+                            name="Setting2"
+                            component={Setting}
+                            options={{
+                                drawerIcon: () => (
+                                    <FontAwesome
+                                        name="gear"
+                                        size={SIZE.icon}
+                                        color={COLOR.textGray}
+                                        style={{ width: 30 }}
+                                    />
+                                ),
+                            }}
+                        />
+                        <Drawer.Screen
+                            name="Setting3"
+                            component={Setting}
+                            options={{
+                                drawerIcon: () => (
+                                    <FontAwesome
+                                        name="gear"
+                                        size={SIZE.icon}
+                                        color={COLOR.textGray}
+                                        style={{ width: 30 }}
+                                    />
+                                ),
+                            }}
+                        />
+                        <Drawer.Screen
+                            name="Setting4"
                             component={Setting}
                             options={{
                                 drawerIcon: () => (

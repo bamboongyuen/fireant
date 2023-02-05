@@ -13,7 +13,7 @@ export const COLOR = {
     black: 'black',
     blue: 'blue',
 
-    active: '#3493C8',
+    active: '#3170ff',
     inactive: '#bce5e5',
 
     bgBlack: '#201f24',
